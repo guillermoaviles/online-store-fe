@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Homepage = (props) => {
   const getItems = () => {
     axios
-      .get("http://localhost:8080/api/online-store/items")
+      .get("https://online-store.herokuapp.com/api/online-store/items")
       .then((response) => {
         props.setItems(response.data);
       });

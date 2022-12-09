@@ -7,7 +7,7 @@ const Description = (props) => {
   const { id } = useParams();
   const getItems = () => {
     axios
-      .get(`http://localhost:8080/api/online-store/items/${id}`)
+      .get(`https://online-store.herokuapp.com/api/online-store/items/${id}`)
       .then((response) => {
         props.setItems(response.data);
       });
@@ -15,10 +15,9 @@ const Description = (props) => {
 
   const getComments = () => {
     axios
-      .get(`http://localhost:8080/api/online-store/comments/${id}`)
+      .get(`https://online-store.herokuapp.com/api/online-store/comments/${id}`)
       .then((response) => {
         setComments(response.data);
-        console.log(response.data);
       });
   };
 
@@ -44,7 +43,7 @@ const Description = (props) => {
       <p>{props.items.price}</p>
       <p>{props.items.description}</p>
       <button>Buy</button>
-      <h2>Comments</h2>
+      <h2>Reviews</h2>
       {newComments}
     </div>
   );
