@@ -35,14 +35,18 @@ const Description = (props) => {
       <p key={key}>{someComment.body}</p>
     );
   });
-
+  const deleteHandler = (itemId) => {
+    const response = axios.delete(`https://online-store.herokuapp.com/api/online-store/deleteItem/${itemId}`).then(response => {
+      props.setItems(response.data)
+    })
+  }
   return (
     <div>
       <h1>{props.items.title}</h1>
       <img src={props.items.images} />
       <p>{props.items.price}</p>
       <p>{props.items.description}</p>
-      <button>Buy</button>
+      <button onClick={() => deleteHandler (props.items._id)}>Buy</button>
       <h2>Reviews</h2>
       {newComments}
     </div>
