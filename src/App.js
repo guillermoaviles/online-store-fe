@@ -1,6 +1,6 @@
 import "./App.css";
 import Create from "./Components/Create";
-import Description from "./Components/Description";
+import Item from "./Components/Item";
 import Edit from "./Components/Edit";
 import Header from "./Components/Header";
 import Homepage from "./Components/Homepage";
@@ -15,7 +15,7 @@ function App() {
     <Header/>
     <Routes>
       <Route path="/" element={<Homepage items={items} setItems={setItems}/>}/>
-      <Route path="/description/:id" element={<Description/>}/>
+      <Route path="/items/:id" element={<Item items={items} setItems={setItems}/>}/>
       <Route path="/edit/:id" element={<Edit/>}/>
       <Route path="/create" element={<Create/>}/>
     </Routes>
