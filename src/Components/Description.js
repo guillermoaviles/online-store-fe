@@ -23,6 +23,9 @@ const Description = (props) => {
     <img src={props.items.images}/>
     <p>{props.items.price}</p>
     <p>{props.items.description}</p>
+    <button>Buy</button>
+    <h2>Comments</h2>
+    <p>comments.....</p>
   </div>
   )
 };
