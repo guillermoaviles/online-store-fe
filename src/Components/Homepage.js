@@ -16,8 +16,8 @@ const Homepage = (props) => {
 
   if (props.items === undefined) return;
 
-  const newData = props.items.map((items, key) => {
-    console.log(items._id)
+  const data = props.items.map((items, key) => {
+    console.log(items._id);
     return (
       <div key={key}>
         <Link to={`description/${items._id}`}>
@@ -28,7 +28,7 @@ const Homepage = (props) => {
     );
   });
 
-  return <div>{newData}</div>;
+  return <div>{data}</div>;
 };
 
 export default Homepage;
