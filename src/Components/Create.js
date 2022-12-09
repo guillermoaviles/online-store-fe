@@ -7,7 +7,16 @@ const Create = () => {
         description: "",
         images: "",
         price: ""
-    })
+    });
+
+    const createNewItem = async () => {
+        try{
+            const newlyCreatedItem = await axios.post('https://online-store.herokuapp.com/api/online-store/newItem', newItem)
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
 
     return(
         <form>
