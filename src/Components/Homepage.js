@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Homepage = (props) => {
   const getItems = () => {
     axios
-      .get("http://localhost:8000/api/online-store/items")
+      .get("http://localhost:8080/api/online-store/items")
       .then((response) => {
         props.setItems(response.data);
       });

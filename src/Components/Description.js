@@ -6,7 +6,7 @@ const Description = (props) => {
   const { id } = useParams();
   const getItems = () => {
     axios
-      .get(`http://localhost:8000/api/online-store/items/${id}`)
+      .get(`http://localhost:8080/api/online-store/items/${id}`)
       .then((response) => {
         props.setItems(response.data);
       });
@@ -21,6 +21,7 @@ const Description = (props) => {
   <div>
     <h1>{props.items.title}</h1>
     <img src={props.items.images}/>
+    <p>{props.items.price}</p>
   </div>
   )
 };
