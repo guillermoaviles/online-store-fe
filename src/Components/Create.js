@@ -2,7 +2,12 @@ import React, { useState} from "react";
 import axios from 'axios'
 
 const Create = () => {
-    
+    const[newItem, setNewItem] = useState({
+        title:"",
+        description: "",
+        images: "",
+        price: ""
+    })
 
     return(
         <form>
