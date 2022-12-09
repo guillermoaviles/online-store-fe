@@ -23,6 +23,7 @@ const Homepage = (props) => {
         <Link to={`description/${items._id}`}>
           <img src={items.images} alt={items.name} />
         </Link>
+        <p>{items.title}</p>
         <p className="Price">{items.price}</p>
       </div>
     );
