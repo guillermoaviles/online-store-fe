@@ -22,6 +22,7 @@ const Description = (props) => {
     <h1>{props.items.title}</h1>
     <img src={props.items.images}/>
     <p>{props.items.price}</p>
+    <p>{props.items.description}</p>
   </div>
   )
 };
