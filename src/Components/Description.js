@@ -32,7 +32,10 @@ const Description = (props) => {
 
   const newComments = comments.map((someComment, key) => {
     return (
-      <p key={key}>{someComment.body}</p>
+      <div key={key}>
+      <p>{someComment.body}</p>
+      <button>Delete Comment</button>
+      </div>
     );
   });
   const deleteHandler = (itemId) => {
