@@ -20,11 +20,11 @@ const Homepage = (props) => {
 
   const data = newData.map((items, key) => {
     return (
-      <div key={key}>
+      <div key={key} className='item'>
         <Link to={`description/${items._id}`}>
-          <img src={items.images} alt={items.name} />
+          <img src={items.images} alt={items.name} className='image'/>
         </Link>
-        <p>{items.title}</p>
+        <p className='item-title'>{items.title}</p>
         <p className="Price">{items.price}</p>
       </div>
     );
