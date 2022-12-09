@@ -41,7 +41,7 @@ const Description = (props) => {
     );
   });
   const deleteItem = (itemId) => {
-    const response = axios
+    axios
       .delete(
         `https://online-store.herokuapp.com/api/online-store/deleteItem/${itemId}`
       )
