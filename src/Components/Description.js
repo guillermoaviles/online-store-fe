@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const Item = (props) => {
+const Description = (props) => {
   const { id } = useParams();
   const getItems = () => {
     axios
@@ -25,4 +25,4 @@ const Item = (props) => {
   )
 };
 
-export default Item;
+export default Description;

@@ -20,7 +20,7 @@ const Homepage = (props) => {
     console.log(items._id);
     return (
       <div key={key}>
-        <Link to={`items/${items._id}`}>
+        <Link to={`description/${items._id}`}>
           <img src={items.images} alt={items.name} />
         </Link>
         <p>{items.title}</p>
