@@ -12,13 +12,14 @@ function App() {
 
   return (
     <div>
-    <Header/>
+      <Homepage/>
+    {/* <Header/>
     <Routes>
       <Route path="/" element={<Homepage items={items} setAllItems={setAllItems}/>}/>
       <Route path="/description/:id" element={<Description/>}/>
       <Route path="/edit/:id" element={<Edit/>}/>
       <Route path="/create" element={<Create/>}/>
-    </Routes>
+    </Routes> */}
     </div>
   );
 }
