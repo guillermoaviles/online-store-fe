@@ -16,7 +16,9 @@ const Homepage = (props) => {
 
   if (props.items === undefined) return;
 
-  const data = props.items.map((items, key) => {
+  let newData = Object.values(props.items);
+
+  const data = newData.map((items, key) => {
     console.log(items._id);
     return (
       <div key={key}>
@@ -28,7 +30,7 @@ const Homepage = (props) => {
       </div>
     );
   });
-
+  if (data === undefined) return;
   return <div>{data}</div>;
 };
 
