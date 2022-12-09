@@ -15,9 +15,12 @@ const Item = (props) => {
     getItems();
   }, []);
 
+  if(props.items === undefined) return;
+
   return(
   <div>
-    <h1></h1>
+    <h1>{props.items.title}</h1>
+    <img src={props.items.images}/>
   </div>
   )
 };
