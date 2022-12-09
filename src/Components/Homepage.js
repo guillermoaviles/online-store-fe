@@ -17,10 +17,11 @@ const Homepage = (props) => {
   if (props.items === undefined) return;
 
   const newData = props.items.map((items, key) => {
+    console.log(items._id)
     return (
       <div key={key}>
-        <Link to={`description/${items.id}`}>
-        <img src={items.images} alt={items.name} />
+        <Link to={`description/${items._id}`}>
+          <img src={items.images} alt={items.name} />
         </Link>
         <p className="Price">{items.price}</p>
       </div>
