@@ -8,18 +8,17 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const [items, setAllItems] = useState({})
+  const [items, setItems] = useState()
 
   return (
     <div>
-      <Homepage/>
-    {/* <Header/>
+    <Header/>
     <Routes>
-      <Route path="/" element={<Homepage items={items} setAllItems={setAllItems}/>}/>
+      <Route path="/" element={<Homepage items={items} setItems={setItems}/>}/>
       <Route path="/description/:id" element={<Description/>}/>
       <Route path="/edit/:id" element={<Edit/>}/>
       <Route path="/create" element={<Create/>}/>
-    </Routes> */}
+    </Routes>
     </div>
   );
 }
