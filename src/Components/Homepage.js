@@ -23,11 +23,12 @@ const Homepage = (props) => {
       <div key={key} className='item'>
         <Link to={`description/${items._id}`}>
           <img src={items.images} alt={items.name} className='image'/>
-        </Link>
+        
         <div className='item-info'>
             <p className='item-title'>{items.title}</p>
             <p className='price'>${items.price}</p>
         </div>
+        </Link>
       </div>
     );
   });
