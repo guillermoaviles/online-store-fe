@@ -138,4 +138,8 @@ to {
 #root {
 height: 100vh;
 }
-  
+
+a:-webkit-any-link{
+    text-decoration: none;
+    color: inherit;
+}
