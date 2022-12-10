@@ -11,7 +11,7 @@ const Create = () => {
 
     const createNewItem = async () => {
         try{
-            const newlyCreatedItem = await axios.post('http://localhost:8080/api/online-store/newItem', newItem)
+            const newlyCreatedItem = await axios.put('https://online-store.herokuapp.com/api/online-store/newItem', newItem)
         }
         catch(err){
             console.log(err)
@@ -23,7 +23,7 @@ const Create = () => {
         newItemInput[e.target.name] = e.target.value;
         setNewItem(newItemInput);
     }
-
+    console.log(newItem)
     return(
         <div>
             <form>

@@ -4,17 +4,17 @@ import { useParams } from 'react-router-dom'
 
 const Edit = () => {
 
-    const {editId} = useParams();
+    const {id} = useParams();
     const [updateItem, setUpdateItem] = useState({
         title: "",
         description: "",
         images: "",
-        price: ""
+        price: Number
     })
 
     const updateItemCall = async () => {
         try {
-          const change = await axios.put(`http://localhost:8080/api/online-store/edit/${editId}`, updateItem)
+          const change = await axios.put(`https://online-store.herokuapp.com/api/online-store/edit/${id}`, updateItem)
         }
         catch (err) {
           console.log(err)
@@ -26,7 +26,7 @@ const Edit = () => {
         itemUpdateInput[e.target.name] = e.target.value;
         setUpdateItem(itemUpdateInput);
     }
-
+    console.log(id, 'params ID')
     return (
         <div>
             <form>

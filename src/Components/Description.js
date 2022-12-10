@@ -8,7 +8,7 @@ const Description = (props) => {
   const { id } = useParams();
   const getItems = () => {
     axios
-      .get(`https://online-store.herokuapp.com/api/online-store/items/${id}`)
+      .get(`https://online-store.herokuapp.com/api/online-store/${id}`)
       .then((response) => {
         props.setItems(response.data);
       });
