@@ -32,17 +32,39 @@ const Description = (props) => {
 
   const newComments = comments.map((someComment, key) => {
     return (
-      <p key={key}>{someComment.body}</p>
+      <div key={key}>
+        <p>{someComment.body}</p>
+        <button onClick={() => deleteComment(someComment._id)}>
+          Delete Comment
+        </button>
+      </div>
     );
   });
-
+  const deleteItem = (itemId) => {
+    axios
+      .delete(
+        `https://online-store.herokuapp.com/api/online-store/deleteItem/${itemId}`
+      )
+      .then((response) => {
+        props.setItems(response.data);
+      });
+  };
+  const deleteComment = (commentId) => {
+    axios
+      .delete(
+        `https://online-store.herokuapp.com/api/online-store/deleteComment/${commentId}`
+      )
+      .then((response) => {
+        props.setComments(response.data);
+      });
+  };
   return (
     <div>
       <h1>{props.items.title}</h1>
       <img src={props.items.images} />
       <p>{props.items.price}</p>
       <p>{props.items.description}</p>
-      <button>Buy</button>
+      <button onClick={() => deleteItem(props.items._id)}>Buy</button>
       <h2>Reviews</h2>
       {newComments}
     </div>
