@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import EditItemButton from './EditItemButton'
 
@@ -31,11 +31,8 @@ const Description = (props) => {
   if (props.items === undefined) return;
   
   if (props.comments === undefined) return;
-
-  let comments = Object.values(props.comments)
   
-  const newComments = comments.map((someComment, key) => {
-    console.log(someComment)
+  const newComments = props.comments.map((someComment, key) => {
     return (
       <div key={key}>
         <p>{someComment.user}</p>
@@ -69,7 +66,7 @@ const Description = (props) => {
     <div>
       <Link to={`/description/edit/${props.items._id}`}><EditItemButton/></Link>
       <h1>{props.items.title}</h1>
-      <img src={props.items.images} />
+      <img src={props.items.images} alt={props.items.title}/>
       <p>{props.items.price}</p>
       <p>{props.items.description}</p>
       <button onClick={() => deleteItem(props.items._id)}>Buy</button>
