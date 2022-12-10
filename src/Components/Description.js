@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import EditItemButton from './EditItemButton'
 
 const Description = (props) => {
   const [comments, setComments] = useState();
@@ -60,6 +61,7 @@ const Description = (props) => {
   };
   return (
     <div>
+      <Link to={`/description/edit/${props.items._id}`}><EditItemButton/></Link>
       <h1>{props.items.title}</h1>
       <img src={props.items.images} />
       <p>{props.items.price}</p>

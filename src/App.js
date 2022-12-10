@@ -16,7 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Homepage items={items} setItems={setItems}/>}/>
       <Route path="/description/:id" element={<Description items={items} setItems={setItems}/>}/>
-      <Route path="/edit/:id" element={<Edit/>}/>
+      <Route path="/description/edit/:editId" element={<Edit/>}/>
       <Route path="/create" element={<Create/>}/>
     </Routes>
     </div>
