@@ -30,10 +30,10 @@ const Edit = () => {
     return (
         <div>
             <form>
-                <input placeholder="Item name" name="title" value={updateItem.title} onChange={handleUpdateInput}></input>
+                <input placeholder="Item name" name="title" value={updateItem.title} onChange={handleUpdateInput} required></input>
                 <input placeholder="Description" name="description" value={updateItem.description} onChange={handleUpdateInput}></input>
                 <input placeholder="Image" name="images" value={updateItem.images} onChange={handleUpdateInput}></input>
-                <input placeholder="Price" name="price" value={updateItem.price} onChange={handleUpdateInput}></input>
+                <input placeholder="Price" name="price" value={updateItem.price} onChange={handleUpdateInput} required></input>
                 <button onClick={updateItemCall}>Submit</button>
             </form>
         </div>

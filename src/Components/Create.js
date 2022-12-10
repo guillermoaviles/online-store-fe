@@ -27,10 +27,10 @@ const Create = () => {
     return(
         <div>
             <form>
-                <input placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate}></input>
+                <input placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate} required></input>
                 <input placeholder="Description" name="description" value={newItem.description} onChange={handleCreate}></input>
                 <input placeholder="Image" name="images" value={newItem.images} onChange={handleCreate}></input>
-                <input placeholder="Price" name="price" value={newItem.price} onChange={handleCreate}></input>
+                <input placeholder="Price" name="price" value={newItem.price} onChange={handleCreate} required></input>
                 <button onClick={createNewItem}>Submit</button>
             </form>
         </div>
