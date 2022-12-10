@@ -9,13 +9,14 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [items, setItems] = useState()
+  const [comments, setComments] = useState();
 
   return (
     <div>
     <Header/>
     <Routes>
       <Route path="/" element={<Homepage items={items} setItems={setItems}/>}/>
-      <Route path="/description/:id" element={<Description items={items} setItems={setItems}/>}/>
+      <Route path="/description/:id" element={<Description items={items} setItems={setItems} comments={comments} setComments={setComments}/>}/>
       <Route path="/description/edit/:editId" element={<Edit/>}/>
       <Route path="/create" element={<Create/>}/>
     </Routes>

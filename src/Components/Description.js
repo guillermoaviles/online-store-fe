@@ -5,7 +5,6 @@ import EditItemButton from './EditItemButton'
 
 const Description = (props) => {
   const navigate = useNavigate();
-  const [comments, setComments] = useState();
   const { id } = useParams();
   const getItems = () => {
     axios
@@ -19,7 +18,7 @@ const Description = (props) => {
     axios
       .get(`https://online-store.herokuapp.com/api/online-store/comments/${id}`)
       .then((response) => {
-        setComments(response.data);
+        props.setComments(response.data);
       });
   };
 
@@ -28,13 +27,18 @@ const Description = (props) => {
     getComments();
   }, []);
 
+  
   if (props.items === undefined) return;
+  
+  if (props.comments === undefined) return;
 
-  if (comments === undefined) return;
-
+  let comments = Object.values(props.comments)
+  
   const newComments = comments.map((someComment, key) => {
+    console.log(someComment)
     return (
       <div key={key}>
+        <p>{someComment.user}</p>
         <p>{someComment.body}</p>
         <button onClick={() => deleteComment(someComment._id)}>
           Delete Comment
