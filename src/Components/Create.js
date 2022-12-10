@@ -1,7 +1,9 @@
 import React, { useState} from "react";
 import axios from 'axios'
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Create = () => {
+    const navigate = useNavigate()
     const[newItem, setNewItem] = useState({
         title:"",
         description: "",
@@ -9,9 +11,11 @@ const Create = () => {
         price: Number
     });
 
-    const createNewItem = async () => {
+    const createNewItem = async (e) => {
+        e.preventDefault()
         try{
-            const newlyCreatedItem = await axios.put('https://online-store.herokuapp.com/api/online-store/newItem', newItem)
+            const newlyCreatedItem = await axios.post('https://online-store.herokuapp.com/api/online-store/newItem', newItem)
+            navigate('/')
         }
         catch(err){
             console.log(err)
@@ -19,6 +23,7 @@ const Create = () => {
     }
 
     const handleCreate = (e) => {
+        e.preventDefault()
         const newItemInput = {...newItem};
         newItemInput[e.target.name] = e.target.value;
         setNewItem(newItemInput);

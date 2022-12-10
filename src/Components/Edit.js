@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate, Navigate } from 'react-router-dom'
 
 const Edit = () => {
 
-    const {id} = useParams();
+    const {editId} = useParams();
     const [updateItem, setUpdateItem] = useState({
         title: "",
         description: "",
@@ -12,9 +12,11 @@ const Edit = () => {
         price: Number
     })
 
-    const updateItemCall = async () => {
+    const updateItemCall = async (e) => {
+        e.preventDefault()
         try {
-          const change = await axios.put(`https://online-store.herokuapp.com/api/online-store/edit/${id}`, updateItem)
+          const change = await axios.put(`https://online-store.herokuapp.com/api/online-store/edit/${editId}`, updateItem)
+            Navigate('/')
         }
         catch (err) {
           console.log(err)
@@ -22,11 +24,14 @@ const Edit = () => {
       }
 
     const handleUpdateInput = (e) => {
+        e.preventDefault()
         const itemUpdateInput = {...updateItem};
         itemUpdateInput[e.target.name] = e.target.value;
         setUpdateItem(itemUpdateInput);
     }
-    console.log(id, 'params ID')
+    console.log(editId, 'params ID')
+    console.log(updateItem)
+
     return (
         <div>
             <form>
