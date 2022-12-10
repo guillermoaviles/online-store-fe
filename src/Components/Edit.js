@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams, useNavigate, Navigate } from 'react-router-dom'
 
 const Edit = () => {
-
+    const navigate = useNavigate()
     const {editId} = useParams();
     const [updateItem, setUpdateItem] = useState({
         title: "",
@@ -16,7 +16,7 @@ const Edit = () => {
         e.preventDefault()
         try {
           const change = await axios.put(`https://online-store.herokuapp.com/api/online-store/edit/${editId}`, updateItem)
-            Navigate('/')
+            navigate(`/description/${editId}`)
         }
         catch (err) {
           console.log(err)
