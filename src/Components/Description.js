@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import EditItemButton from './EditItemButton'
 
 const Description = (props) => {
+  const navigate = useNavigate();
   const [comments, setComments] = useState();
   const { id } = useParams();
   const getItems = () => {
@@ -48,6 +49,7 @@ const Description = (props) => {
       )
       .then((response) => {
         props.setItems(response.data);
+        navigate('/')
       });
   };
   const deleteComment = (commentId) => {
