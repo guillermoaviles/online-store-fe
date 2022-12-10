@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 
 const Edit = () => {
 
-    const {id} = useParams();
+    const {editId} = useParams();
     const [updateItem, setUpdateItem] = useState({
         title: "",
         description: "",
@@ -14,7 +14,7 @@ const Edit = () => {
 
     const updateItemCall = async () => {
         try {
-          const change = await axios.put(`https://floral-bird-829.fly.dev/api/recipes/${id}`, updateItem)
+          const change = await axios.put(`http://localhost:8080/api/online-store/edit/${editId}`, updateItem)
         }
         catch (err) {
           console.log(err)
