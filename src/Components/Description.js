@@ -26,7 +26,6 @@ const Description = (props) => {
     getItems();
     getComments();
   }, []);
-
   
   if (props.items === undefined) return;
   
@@ -59,9 +58,10 @@ const Description = (props) => {
         `https://online-store.herokuapp.com/api/online-store/deleteComment/${commentId}`
       )
       .then((response) => {
-        props.setComments(response.data);
+        window.location.reload()
       });
   };
+  console.log(id)
   return (
     <div>
       <Link to={`/description/edit/${props.items._id}`}><EditItemButton/></Link>
