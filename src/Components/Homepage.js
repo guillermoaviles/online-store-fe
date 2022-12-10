@@ -24,12 +24,18 @@ const Homepage = (props) => {
         <Link to={`description/${items._id}`}>
           <img src={items.images} alt={items.name} className='image'/>
         </Link>
-        <p className='item-title'>{items.title}</p>
-        <p className="Price">{items.price}</p>
+        <div className='item-info'>
+            <p className='item-title'>{items.title}</p>
+            <p className='price'>${items.price}</p>
+        </div>
       </div>
     );
   });
-  return <div>{data}</div>;
+  return  <div>
+            <h1 className='items'>Items</h1>
+            <div className='gallery-container'>{data}</div>
+          </div>
+  
 };
 
 export default Homepage;
