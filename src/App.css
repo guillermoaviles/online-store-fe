@@ -104,6 +104,27 @@ nav h2:hover {
     font-size: 20px;
 }
 
+.sell-button {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.cart {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.nav {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav h2 {
+    float: right;
+}
+
 
 @keyframes App-logo-spin {
 from {
