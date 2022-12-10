@@ -20,16 +20,22 @@ const Homepage = (props) => {
 
   const data = newData.map((items, key) => {
     return (
-      <div key={key}>
+      <div key={key} className='item'>
         <Link to={`description/${items._id}`}>
-          <img src={items.images} alt={items.name} />
+          <img src={items.images} alt={items.name} className='image'/>
         </Link>
-        <p>{items.title}</p>
-        <p className="Price">{items.price}</p>
+        <div className='item-info'>
+            <p className='item-title'>{items.title}</p>
+            <p className='price'>${items.price}</p>
+        </div>
       </div>
     );
   });
-  return <div>{data}</div>;
+  return  <div>
+            <h1 className='items'>Items</h1>
+            <div className='gallery-container'>{data}</div>
+          </div>
+  
 };
 
 export default Homepage;
