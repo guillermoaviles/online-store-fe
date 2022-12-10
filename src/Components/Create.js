@@ -6,7 +6,7 @@ const Create = () => {
         title:"",
         description: "",
         images: "",
-        price: ""
+        price: Number
     });
 
     const createNewItem = async () => {
