@@ -20,7 +20,7 @@ function App() {
       <Route path="/description/:id" element={<Description items={items} setItems={setItems} comments={comments} setComments={setComments}/>}/>
       <Route path="/description/edit/:editId" element={<Edit/>}/>
       <Route path="/create" element={<Create/>}/>
-      <Route path="/addComment/:id" element={<AddComment/>}/>
+      <Route path="/addComment/:id" element={<AddComment comments={comments} setComments={setComments}/>}/>
     </Routes>
     </div>
   );
