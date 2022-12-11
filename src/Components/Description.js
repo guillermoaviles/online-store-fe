@@ -1,11 +1,10 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import EditItemButton from './EditItemButton'
 
 const Description = (props) => {
   const navigate = useNavigate();
-  const [comments, setComments] = useState();
   const { id } = useParams();
   const getItems = () => {
     axios
@@ -19,7 +18,7 @@ const Description = (props) => {
     axios
       .get(`https://online-store.herokuapp.com/api/online-store/comments/${id}`)
       .then((response) => {
-        setComments(response.data);
+        props.setComments(response.data);
       });
   };
 
@@ -27,14 +26,15 @@ const Description = (props) => {
     getItems();
     getComments();
   }, []);
-
+  
   if (props.items === undefined) return;
-
-  if (comments === undefined) return;
-
-  const newComments = comments.map((someComment, key) => {
+  
+  if (props.comments === undefined) return;
+  
+  const newComments = props.comments.map((someComment, key) => {
     return (
       <div key={key}>
+        <p>{someComment.user}</p>
         <p>{someComment.body}</p>
         <button onClick={() => deleteComment(someComment._id)}>
           Delete Comment
@@ -42,6 +42,7 @@ const Description = (props) => {
       </div>
     );
   });
+  
   const deleteItem = (itemId) => {
     axios
       .delete(
@@ -58,18 +59,20 @@ const Description = (props) => {
         `https://online-store.herokuapp.com/api/online-store/deleteComment/${commentId}`
       )
       .then((response) => {
-        props.setComments(response.data);
+        window.location.reload()
       });
   };
+  
   return (
     <div>
       <Link to={`/description/edit/${props.items._id}`}><EditItemButton/></Link>
       <h1>{props.items.title}</h1>
-      <img src={props.items.images} />
+      <img src={props.items.images} alt={props.items.title}/>
       <p>{props.items.price}</p>
       <p>{props.items.description}</p>
       <button onClick={() => deleteItem(props.items._id)}>Buy</button>
       <h2>Reviews</h2>
+      <Link to={`/addComment/${props.items._id}`}><button>Add Review</button></Link>
       {newComments}
     </div>
   );
