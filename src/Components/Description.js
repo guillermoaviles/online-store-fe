@@ -61,7 +61,7 @@ const Description = (props) => {
         window.location.reload()
       });
   };
-  console.log(id)
+  
   return (
     <div>
       <Link to={`/description/edit/${props.items._id}`}><EditItemButton/></Link>
