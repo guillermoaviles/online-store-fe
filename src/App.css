@@ -89,7 +89,7 @@ nav h2:hover {
     border-radius: 10px;
 }
 
-.image {
+.gallery-image {
     height: 225px;
     width: auto;
 }
@@ -125,6 +125,104 @@ nav h2:hover {
     float: right;
 }
 
+.description-page {
+    height: 150vh;
+}
+
+.product-title {
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.product-box {
+    max-width: 1100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: auto;
+    list-style: none;
+}
+
+.description-image {
+    height: 550px;
+    width: auto;
+}
+
+.item-price {
+    font-size: 40px;
+}
+
+.item-description {
+    width: 450px;
+    font-size: 20px;
+}
+
+.buy-button {
+    background-color: #7ae582;
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    border-style: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.edit-button {
+    background-color: #fec601;
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    border-style: none;
+    font-weight: bold;
+}
+
+.review-button {
+    background-color: #fec601;
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    border-style: none;
+    font-weight: bold;
+}
+
+.delete-comment-button {
+    background-color: #fec601;
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    border-style: none;
+    font-weight: bold;
+}
+
+.reviews-box {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.item-description-box {
+    padding: 15px;
+    background-color: #ebf2fa;
+    border-radius: 30px;
+}
+
+.comment-box {
+    padding: 15px;
+    margin: 20px;
+    background-color: #ebf2fa;
+    border-radius: 30px;
+}
+
+.reviews-box {
+    padding: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #191c1e;
+    border-radius: 30px;
+}
 
 @keyframes App-logo-spin {
 from {

@@ -22,7 +22,7 @@ const Homepage = (props) => {
     return (
       <div key={key} className='item'>
         <Link to={`description/${items._id}`}>
-          <img src={items.images} alt={items.name} className='image'/>
+          <img src={items.images} alt={items.name} className='gallery-image'/>
         
         <div className='item-info'>
             <p className='item-title'>{items.title}</p>

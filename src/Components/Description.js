@@ -33,10 +33,10 @@ const Description = (props) => {
   
   const newComments = props.comments.map((someComment, key) => {
     return (
-      <div key={key}>
-        <p>{someComment.user}</p>
-        <p>{someComment.body}</p>
-        <button onClick={() => deleteComment(someComment._id)}>
+      <div className='comment-box' key={key}>
+        <p>User: {someComment.user}</p>
+        <p>Comment: {someComment.body}</p>
+        <button className='delete-comment-button' onClick={() => deleteComment(someComment._id)}>
           Delete Comment
         </button>
       </div>
@@ -64,16 +64,29 @@ const Description = (props) => {
   };
   
   return (
-    <div>
-      <Link to={`/description/edit/${props.items._id}`}><EditItemButton/></Link>
-      <h1>{props.items.title}</h1>
-      <img src={props.items.images} alt={props.items.title}/>
-      <p>{props.items.price}</p>
-      <p>{props.items.description}</p>
-      <button onClick={() => deleteItem(props.items._id)}>Buy</button>
-      <h2>Reviews</h2>
-      <Link to={`/addComment/${props.items._id}`}><button>Add Review</button></Link>
-      {newComments}
+    <div className='description-page'>
+      <h1 className='product-title'>{props.items.title}</h1>
+      <div className='product-box'>
+        <div className='image-box'>
+          <img className='description-image' src={props.items.images} alt={props.items.title}/>
+        </div>
+        <div className='description-box'>
+          <div className='item-description-box'>
+            <h2>Item Description</h2>
+            <p className='item-description'>{props.items.description}</p>
+            <p className='item-price'>${props.items.price}</p>
+            <div>
+              <button className='buy-button' onClick={() => deleteItem(props.items._id)}>Buy</button>
+              <Link to={`/description/edit/${props.items._id}`}><EditItemButton/></Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='reviews-box'>
+        <h2>Reviews</h2>
+        <Link to={`/addComment/${props.items._id}`}><button className='review-button'>Add Review</button></Link>
+        {newComments}
+      </div>
     </div>
   );
 };
