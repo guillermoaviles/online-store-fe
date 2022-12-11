@@ -241,3 +241,16 @@ a:-webkit-any-link{
     text-decoration: none;
     color: inherit;
 }
+
+@media only screen and (max-width: 600px) {
+    .description-page {
+        text-align: center;
+    }
+    .description-image {
+        height: 100%;
+        width: 400px;
+    }
+    .reviews-box {
+        margin-bottom: -200px;
+    }
+}
