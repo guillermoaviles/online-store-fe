@@ -14,7 +14,7 @@ const AddComment = () => {
 const addNewComment = async (e) => {
   try {
         e.preventDefault()
-        const newlyCreatedCmt = await axios.post(`http://localhost:8080/api/online-store/newComment/${commentId}`, newComment)
+        const newlyCreatedCmt = await axios.post(`https://online-store.herokuapp.com/api/online-store/${commentId}`, newComment)
         navigate(`/description/${commentId}`)
   }
   catch(err){
