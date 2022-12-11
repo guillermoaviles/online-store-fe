@@ -37,7 +37,7 @@ const Description = (props) => {
         <p>User: {someComment.user}</p>
         <p>Comment: {someComment.body}</p>
         <button className='delete-comment-button' onClick={() => deleteComment(someComment._id)}>
-          Delete Comment
+          Delete Review
         </button>
       </div>
     );
