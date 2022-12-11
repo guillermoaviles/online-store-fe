@@ -14,7 +14,7 @@ const AddComment = () => {
 const addNewComment = async (e) => {
   try {
         e.preventDefault()
-        const newlyCreatedCmt = await axios.post(`https://online-store.herokuapp.com/api/online-store/newComment/${commentId}`, newComment)
+        const newlyCreatedCmt = await axios.post(`http://localhost:8080/api/online-store/newComment/${commentId}`, newComment)
         navigate(`/description/${commentId}`)
   }
   catch(err){
@@ -22,23 +22,12 @@ const addNewComment = async (e) => {
   }
 }
 
-  // const addNewComment = (e) => {
-  //   e.preventDefault();
-  //   axios.post(
-  //     `https://online-store.herokuapp.com/api/online-store/newComment/${commentId}`
-  //   );
-  //   navigate(`/description/${commentId}`);
-  // };
-
   const handleComment = (e) => {
     const newCommentInput = {...newComment}
     newCommentInput[e.target.name] = e.target.value
     setNewComment(newCommentInput)
   };
-
-  console.log(newComment)
-  console.log(commentId)
-
+console.log(newComment)
   return (
     <div>
       <form onSubmit={addNewComment}>
