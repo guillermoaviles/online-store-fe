@@ -71,7 +71,7 @@ const Description = (props) => {
       <p>{props.items.description}</p>
       <button onClick={() => deleteItem(props.items._id)}>Buy</button>
       <h2>Reviews</h2>
-      <Link to={`/addComment/${props.items._id}`}><button>Add Comment</button></Link>
+      <Link to={`/addComment/${props.items._id}`}><button>Add Review</button></Link>
       {newComments}
     </div>
   );
