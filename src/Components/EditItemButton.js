@@ -2,7 +2,7 @@ import React from 'react'
 
 const EditItemButton = () => {
   return (
-    <button>Edit</button>
+    <button className='edit-button'>Edit Item</button>
   )
 }
 
