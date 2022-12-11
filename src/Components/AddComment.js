@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
-const AddComment = (props) => {
+const AddComment = () => {
   const {commentId} = useParams();
   const navigate = useNavigate();
   const [newComment, setNewComment] = useState({
@@ -11,13 +11,24 @@ const AddComment = (props) => {
     item: commentId
   });
 
-  const addNewComment = (e) => {
-    e.preventDefault();
-    axios.post(
-      `https://online-store.herokuapp.com/api/online-store/newComment/${commentId}`
-    );
-    navigate(`/description/${commentId}`);
-  };
+const addNewComment = async (e) => {
+  try {
+        e.preventDefault()
+        const newlyCreatedCmt = await axios.post(`https://online-store.herokuapp.com/api/online-store/newComment/${commentId}`, newComment)
+        navigate(`/description/${commentId}`)
+  }
+  catch(err){
+    console.log(err)
+  }
+}
+
+  // const addNewComment = (e) => {
+  //   e.preventDefault();
+  //   axios.post(
+  //     `https://online-store.herokuapp.com/api/online-store/newComment/${commentId}`
+  //   );
+  //   navigate(`/description/${commentId}`);
+  // };
 
   const handleComment = (e) => {
     const newCommentInput = {...newComment}

@@ -42,6 +42,7 @@ const Description = (props) => {
       </div>
     );
   });
+  
   const deleteItem = (itemId) => {
     axios
       .delete(
