@@ -4,14 +4,14 @@
     background: #191c1e;
     height: 100vh;
 }
-  
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-/* img {
+    /* img {
     animation: App-logo-spin infinite 20s linear;
 } */
 }
@@ -92,6 +92,8 @@ nav h2:hover {
 .gallery-image {
     height: 225px;
     width: auto;
+    max-width: 300px;
+    max-height: 225px;
 }
 
 .item-title {
@@ -225,32 +227,112 @@ nav h2:hover {
 }
 
 @keyframes App-logo-spin {
-from {
-    transform: rotate(0deg);
-}
-to {
-    transform: rotate(360deg);
-}
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #root {
-height: 100vh;
+    height: 100vh;
 }
 
-a:-webkit-any-link{
+a:-webkit-any-link {
     text-decoration: none;
     color: inherit;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 375px) {
     .description-page {
         text-align: center;
     }
+
     .description-image {
         height: 100%;
-        width: 400px;
+        width: 340px;
     }
+
     .reviews-box {
-        margin-bottom: -200px;
+        max-width: 280px;
+        margin-right: 50px;
+    }
+
+    .cart {
+        margin-right: 30px;
+    }
+    .item {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .description-page {
+        text-align: center;
+    }
+
+    .description-image {
+        height: 100%;
+        width: 340px;
+    }
+
+    .reviews-box {
+        margin-right: 60px;
+    }
+
+    .cart {
+        margin-right: 30px;
+    }
+    .item {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .description-page {
+        text-align: center;
+    }
+
+    .description-image {
+        height: 100%;
+        width: 380px;
+        padding-right: 26px;
+
+    }
+
+    .reviews-box {
+        max-width: 280px;
+        margin-left: 40px;
+    }
+
+    .cart {
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 912px) {
+    .product-title {
+        text-align: center;
+    }
+
+    .description-image {
+        height: 100%;
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .cart {
+        margin-right: 80px;
+    }
+    .description-image {
+        height: 100%;
+        max-width: 800px;
+    }
+
+    .product-title {
+        text-align: center;
     }
 }
