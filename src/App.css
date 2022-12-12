@@ -301,6 +301,10 @@ a:-webkit-any-link {
     color: inherit;
 }
 
+.description-page {
+    min-height: 100vh;
+}
+
 @media only screen and (max-width: 375px) {
     .description-page {
         text-align: center;
