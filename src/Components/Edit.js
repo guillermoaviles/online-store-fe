@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate, Navigate } from 'react-router-dom'
+import Footer from "./Footer";
 
 const Edit = () => {
     const navigate = useNavigate()
@@ -42,6 +43,7 @@ const Edit = () => {
                 <input className='input' placeholder="Price" name="price" value={updateItem.price} onChange={handleUpdateInput} required></input>
                 <button className='item-button' onClick={updateItemCall}>Submit</button>
             </form>
+            <Footer/>
         </div>
     )
 
