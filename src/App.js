@@ -1,22 +1,29 @@
 import "./App.css";
 import Create from "./Components/Create";
-import Description from "./Components/Description";
 import Edit from "./Components/Edit";
 import Header from "./Components/Header";
+import Description from "./Components/Description";
 import Homepage from "./Components/Homepage";
-import React from "react";
+import Footer from "./Components/Footer";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import AddComment from "./Components/AddComment";
 
 function App() {
+  const [items, setItems] = useState()
+  const [comments, setComments] = useState();
+
   return (
     <div>
     <Header/>
     <Routes>
-      <Route path="/" element={<Homepage/>}/>
-      <Route path="/description/:id" element={<Description/>}/>
-      <Route path="/edit/:id" element={<Edit/>}/>
+      <Route path="/" element={<Homepage items={items} setItems={setItems}/>}/>
+      <Route path="/description/:id" element={<Description items={items} setItems={setItems} comments={comments} setComments={setComments}/>}/>
+      <Route path="/description/edit/:editId" element={<Edit/>}/>
       <Route path="/create" element={<Create/>}/>
+      <Route path="/addComment/:commentId" element={<AddComment comments={comments} setComments={setComments}/>}/>
     </Routes>
+    <Footer/>
     </div>
   );
 }
