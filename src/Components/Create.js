@@ -33,12 +33,12 @@ const Create = () => {
     return(
         <div className='action-page'>
             <h1>Sell Item</h1>
-            <form className='item-box'>
-                <input className='input' placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate} required></input>
-                <input className='input' placeholder="Description" name="description" value={newItem.description} onChange={handleCreate}></input>
-                <input className='input' placeholder="Image" name="images" value={newItem.images} onChange={handleCreate}></input>
-                <input className='input' placeholder="Price" name="price" value={newItem.price} onChange={handleCreate} required></input>
-                <button className='item-button' onClick={createNewItem}>Submit</button>
+            <form className='item-box' onSubmit={createNewItem}>
+                <input className='input' placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate} required />
+                <input className='input' placeholder="Description" name="description" value={newItem.description} onChange={handleCreate} required></input>
+                <input className='input' placeholder="Image" name="images" value={newItem.images} onChange={handleCreate} required></input>
+                <input className='input' placeholder="Price" name="price" value={newItem.price} onChange={handleCreate} type='number' required></input>
+                <button className='item-button'>Submit</button>
             </form>
         </div>
     )
