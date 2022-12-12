@@ -8,7 +8,7 @@
 
 The online store app would be the place where the users can freely buy any available items on the sites, sell an item by creating a new post, add a review/comment to an existing item. The app give the users the freedom to buy and sell without paying any fees or restrictions.
 
-+ This repository is the backend respository for the app.
++ This repository is the front-end respository for the app.
 + The backend is deployed on Heroky: [here](https://online-store.herokuapp.com/api/online-store/)
 + The front end is deployed on Vercel: [here]()
 + The associated front end repository can be found: [here](https://github.com/guillermoaviles/online-store-fe)
