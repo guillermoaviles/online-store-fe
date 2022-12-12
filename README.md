@@ -88,3 +88,6 @@ We did not have the 'newComment' before and it worked after we added.
 + [Inline HTML](https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
 + [Jullian Wallis - What Is VERCEL? Is It The Right Platform For Front-End Developers?](https://webo.digital/blog/what-is-vercel-is-it-the-right-platform-for-front-end-developers/)
 + [Whimsical - Used for the Req-Res Diagram](https://whimsical.com)
++ [ESlint](https://stackoverflow.com/questions/41604162/eslint-throws-is-assigned-a-value-but-never-used-webpack-module)
++ [useEffect Hook missing dependencies](https://bobbyhadz.com/blog/react-hook-useeffect-has-missing-dependency)
+
