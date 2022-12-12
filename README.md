@@ -22,26 +22,26 @@ Vercel is the most accessible platform to deploy websites. By connecting the ** 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width=10% height=10%><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" width=10% height=10%> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" width=10% height=10%><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width=10% height=10%>
 - Axios
 
-## Wireframs
+## Wireframes
 ### Before
 <div align="center">
 <img src="https://media.git.generalassemb.ly/user/45455/files/b3d3114b-01f7-4d97-8d95-1f6aac2a14ec"/>
 </div>
 
 ### After
-<div align="center">
-<img src="https://user-images.githubusercontent.com/114704720/206949148-8708de1d-0166-4e0d-ad93-df2835535fbe.png"/>
+<div align="center">TBD
 </div>
 
 ## React Component Hierarchy
 ### Before
 <div align="center">
-<img src="https://media.git.generalassemb.ly/user/45455/files/b3d3114b-01f7-4d97-8d95-1f6aac2a14ec"/>
+<img src="https://user-images.githubusercontent.com/114704720/206966901-599ce162-ff7c-4d52-bd07-8b6338ae1cc8.png"/>
 </div>
+
 
 ### After
 <div align="center">
-<img src="https://user-images.githubusercontent.com/114704720/206949148-8708de1d-0166-4e0d-ad93-df2835535fbe.png"/>
+<img src="https://user-images.githubusercontent.com/114704720/206968678-a7b889fe-cc63-4ebb-832d-b53aaa6084c3.png"/>
 </div>
 
 ## User Stories
