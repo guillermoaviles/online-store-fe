@@ -79,7 +79,7 @@ h1 {
     margin: auto;
     margin-top: 40px;
     list-style: none;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .item {
@@ -145,6 +145,7 @@ h1 {
     bottom: 0;
     width: 100%;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 .nav h2 {
@@ -154,10 +155,6 @@ h1 {
 nav h4 {
     margin-left: auto;
     margin-right: auto;
-}
-
-.description-page {
-    height: 150vh;
 }
 
 .product-title {
