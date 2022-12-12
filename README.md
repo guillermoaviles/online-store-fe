@@ -66,7 +66,21 @@ The team followed the daily SCRUM protocols and met for a 5 to 10 minutes a day 
 ## Code Snippet
 
 ## Issues & Resolutions
+We were having an issue on submitting an comment and the request was not coming through. We tested the request with Postman and it worked as expected. So we narrowed it down to our codes. I looked over many times, added console.log to check every inputs were received correctly and still did not know why it did not work. Then I realized, in the axios call, I forgot the second argument in the code hence we were sending an empty body everytime. I realized that I skipped over the code because my brain assumed that the information was supposed to be there. But when you are reviewing someone's code, you have to read it carefully. DO NOT SKIP!
 
+```
+const addNewComment = async (e) => {
+  try {
+        e.preventDefault()
+        const newlyCreatedCmt = await axios.post(`https://online-store.herokuapp.com/api/online-store/newComment/${commentId}`, newComment)
+        navigate(`/description/${commentId}`)
+  }
+  catch(err){
+    console.log(err)
+  }
+}
+```
+We did not have the 'newComment' before and it worked after we added.
 
 ## Resources:
 
