@@ -45,13 +45,14 @@ Vercel is the most accessible platform to deploy websites. By connecting the ** 
 </div>
 
 
-## User Stories
-+ AAU, I want to be able to 
-+ AAU, I want to be able to 
-+ AAU, I want to able to 
-+ AAU, I want to be able to 
-
 ## MVP
++ AAU, I want to be able to see a list of items that are available for sell.
++ AAU, I want to be able to sell an item by create a new listing.
++ AAU, I want to be able to update information on an item. 
++ AAU, I want to be able to buy the item and then the item wil be deleted.
++ AAU, I want to be able to see a list of reviews of an item if it is available.
++ AAU, I want to be able to add a review to an item.
++ AAU, I want to be able to delete a comment.
 
 ## Post MVP
 
