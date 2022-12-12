@@ -34,6 +34,7 @@ const Edit = () => {
 
     return (
         <div>
+            <h1>Edit Item</h1>
             <form className='item-box'>
                 <input className='input' placeholder="Item name" name="title" value={updateItem.title} onChange={handleUpdateInput} required></input>
                 <input className='input' placeholder="Description" name="description" value={updateItem.description} onChange={handleUpdateInput}></input>
