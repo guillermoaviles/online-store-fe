@@ -51,7 +51,7 @@ const Description = (props) => {
       )
       .then((response) => {
         props.setItems(response.data);
-        navigate('/')
+        // navigate('/')
       });
   };
   const deleteComment = (commentId) => {
@@ -77,7 +77,9 @@ const Description = (props) => {
             <p className='item-description'>{props.items.description}</p>
             <p className='item-price'>${props.items.price}</p>
             <div>
-              <button className='buy-button' onClick={() => deleteItem(props.items._id)}>Buy</button>
+              <Link to={'/shipping-info'}>
+                <button className='buy-button' onClick={() => deleteItem(props.items._id)}>Buy</button>
+              </Link>
               <Link to={`/description/edit/${props.items._id}`}><EditItemButton/></Link>
             </div>
           </div>
