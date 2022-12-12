@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Project 3 - Dealio - Online Store App (Front-end)
+<div align="center">A online store app by <strong>Guillermo Aviles</strong>, <strong>Hiram Rodriguez</strong>, and <strong>Nghia (Nathan) Vo</strong>
+<br></br>
+<img src="https://user-images.githubusercontent.com/114704720/206938631-ff29447f-2f0c-4553-a77e-9738139ff8e2.png"/>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+The online store app would be the place where the users can freely buy any available items on the sites, sell an item by creating a new post, add a review/comment to an existing item. The app give the users the freedom to buy and sell without paying any fees or restrictions.
 
-In the project directory, you can run:
++ This repository is the backend respository for the app.
++ The backend is deployed on Heroky: [here](https://online-store.herokuapp.com/api/online-store/)
++ The front end is deployed on Vercel: [here]()
++ The associated front end repository can be found: [here](https://github.com/guillermoaviles/online-store-fe)
 
-### `npm start`
+## Deployment
+The front-end of our application uses ReactJS as our library. The front-end follows the best practice in naming the components to be semantic. The front-end composes the following technologies/platforms:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Vercel:
+Vercel is the most accessible platform to deploy websites. By connecting the ** your GitHub repository** to Vercel, you can simply deploy the main branch to Vercel domains — and it does all the heavy lifting for you. **(Julian Wallis)**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width=10% height=10%><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" width=10% height=10%> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" width=10% height=10%><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width=10% height=10%>
+- Axios
 
-### `npm test`
+## Wireframs
+### Before
+<div align="center">
+<img src="https://media.git.generalassemb.ly/user/45455/files/b3d3114b-01f7-4d97-8d95-1f6aac2a14ec"/>
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### After
+<div align="center">
+<img src="https://user-images.githubusercontent.com/114704720/206949148-8708de1d-0166-4e0d-ad93-df2835535fbe.png"/>
+</div>
 
-### `npm run build`
+## React Component Hierarchy
+### Before
+<div align="center">
+<img src="https://media.git.generalassemb.ly/user/45455/files/b3d3114b-01f7-4d97-8d95-1f6aac2a14ec"/>
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### After
+<div align="center">
+<img src="https://user-images.githubusercontent.com/114704720/206949148-8708de1d-0166-4e0d-ad93-df2835535fbe.png"/>
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## User Stories
++ AAU, I want to be able to 
++ AAU, I want to be able to 
++ AAU, I want to able to 
++ AAU, I want to be able to 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## MVP
 
-### `npm run eject`
+## Post MVP
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Management
+The team followed the daily SCRUM protocols and met for a 5 to 10 minutes a day to discuss small wins, achievements, any blockers, unresolved issues, obstacles that we were encountering. We also met before the day end to discuss any working plans and small goals for the next days.As for the Git workflow, we follow the *'Feature Branch'* method where we have the inital code set-up in the main branch. Everyone who is working will branch out to dev branch to work and push up the code accordingly. Guillermo, who is our Git Manager, then reviewed the latest code with the team to validate the code. He then will submit a pull request and merged that PR to the dev branch. Once our code met MVP, he then merge code to main branch for deployment to Heroku. The team was committed to collabrate creatively and equally. We tried to be mindful of that and divided the work so that everyone at least working on something on both backend and front end.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<div align="center">
+<img src="https://user-images.githubusercontent.com/114704720/206955919-a8dbd9d1-3a2c-4e1d-bb16-b626883ce46c.png"/>
+</div>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Code Snippet
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Issues & Resolutions
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Resources:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
++ [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
++ [Inline HTML](https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
++ [Jullian Wallis - What Is VERCEL? Is It The Right Platform For Front-End Developers?](https://webo.digital/blog/what-is-vercel-is-it-the-right-platform-for-front-end-developers/)
++ [Whimsical - Used for the Req-Res Diagram](https://whimsical.com)
