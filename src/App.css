@@ -79,6 +79,7 @@ h1 {
     margin: auto;
     margin-top: 40px;
     list-style: none;
+    height: 100vh;
 }
 
 .item {
@@ -139,10 +140,11 @@ h1 {
 }
 
 .footer {
-    list-style-type: none;
-    margin: 0;
-    margin-top: 80px;
-    padding: 0;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .nav h2 {
@@ -278,6 +280,10 @@ nav h4 {
     border-style: none;
     font-weight: bold;
     margin-top: 15px;
+}
+
+.action-page {
+    height: 100vh;
 }
 
 @keyframes App-logo-spin {

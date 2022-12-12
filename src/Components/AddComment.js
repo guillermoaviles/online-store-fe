@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import Footer from "./Footer";
+
 
 const AddComment = () => {
   const {commentId} = useParams();
@@ -30,14 +30,13 @@ const addNewComment = async (e) => {
   };
 console.log(newComment)
   return (
-    <div className='add-review-page'>
+    <div className='action-page'>
       <h1>Add Review</h1>
       <form className='item-box' onSubmit={addNewComment}>
         <input className='input' placeholder="Name" onChange={handleComment} name="user" value={newComment.user}></input>
         <input className='input' placeholder="Review" onChange={handleComment} name="body" value={newComment.body}></input>
         <button className='item-button' onClick={addNewComment}>Submit</button>
       </form>
-      <Footer/>
     </div>
   );
 };

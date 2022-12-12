@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import axios from 'axios'
 import { Navigate, useNavigate } from "react-router-dom";
-import Footer from "./Footer";
+
 
 const Create = () => {
     const navigate = useNavigate()
@@ -31,7 +31,7 @@ const Create = () => {
     }
     console.log(newItem)
     return(
-        <div>
+        <div className='action-page'>
             <h1>Sell Item</h1>
             <form className='item-box'>
                 <input className='input' placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate} required></input>
@@ -40,7 +40,6 @@ const Create = () => {
                 <input className='input' placeholder="Price" name="price" value={newItem.price} onChange={handleCreate} required></input>
                 <button className='item-button' onClick={createNewItem}>Submit</button>
             </form>
-            <Footer/>
         </div>
     )
     

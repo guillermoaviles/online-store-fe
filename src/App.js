@@ -4,6 +4,7 @@ import Edit from "./Components/Edit";
 import Header from "./Components/Header";
 import Description from "./Components/Description";
 import Homepage from "./Components/Homepage";
+import Footer from "./Components/Footer";
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import AddComment from "./Components/AddComment";
@@ -22,6 +23,7 @@ function App() {
       <Route path="/create" element={<Create/>}/>
       <Route path="/addComment/:commentId" element={<AddComment comments={comments} setComments={setComments}/>}/>
     </Routes>
+    <Footer/>
     </div>
   );
 }
