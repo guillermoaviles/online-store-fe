@@ -1,12 +1,13 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import axios from 'axios'
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import FileBase64 from 'react-file-base64'
 
 
 const Create = () => {
     const navigate = useNavigate()
-    const[newItem, setNewItem] = useState({
-        title:"",
+    const [newItem, setNewItem] = useState({
+        title: "",
         description: "",
         images: "",
         price: Number
@@ -14,23 +15,23 @@ const Create = () => {
 
     const createNewItem = async (e) => {
         e.preventDefault()
-        try{/*eslint-disable no-unused-vars*/
+        try {
             const newlyCreatedItem = await axios.post('https://online-store.herokuapp.com/api/online-store/newItem', newItem)
             navigate('/')
         }
-        catch(err){
+        catch (err) {
             console.log(err)
         }
     }
 
     const handleCreate = (e) => {
         e.preventDefault()
-        const newItemInput = {...newItem};
+        const newItemInput = { ...newItem };
         newItemInput[e.target.name] = e.target.value;
         setNewItem(newItemInput);
     }
     console.log(newItem)
-    return(
+    return (
         <div className='action-page'>
             <h1>Sell Item</h1>
             <form className='item-box' onSubmit={createNewItem}>
@@ -42,7 +43,7 @@ const Create = () => {
             </form>
         </div>
     )
-    
+
 };
 
 export default Create;
