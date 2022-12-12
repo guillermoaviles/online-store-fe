@@ -310,6 +310,15 @@ a:-webkit-any-link {
     .cart {
         margin-right: 30px;
     }
+
+    .item-description-box {
+        max-width: 300px;
+        
+    }
+
+    .item-description {
+        max-width: 300px;
+    }
 }
 
 @media only screen and (max-width: 912px) {
