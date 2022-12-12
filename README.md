@@ -41,8 +41,9 @@ Vercel is the most accessible platform to deploy websites. By connecting the ** 
 
 ### After
 <div align="center">
-<img src="https://user-images.githubusercontent.com/114704720/206968678-a7b889fe-cc63-4ebb-832d-b53aaa6084c3.png"/>
+<img src="https://user-images.githubusercontent.com/114704720/206969375-d5fccfd9-90c2-4ca9-b93f-45694715bc19.png"/>
 </div>
+
 
 ## User Stories
 + AAU, I want to be able to 
