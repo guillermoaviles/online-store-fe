@@ -16,13 +16,15 @@ const Edit = () => {
     const updateItemCall = async (e) => {
         e.preventDefault()
         try {
+            /*eslint-disable no-unused-vars*/
           const change = await axios.put(`https://online-store.herokuapp.com/api/online-store/edit/${editId}`, updateItem)
             navigate(`/description/${editId}`)
         }
         catch (err) {
           console.log(err)
         }
-      }
+      } 
+
 
     const handleUpdateInput = (e) => {
         e.preventDefault()
@@ -30,8 +32,6 @@ const Edit = () => {
         itemUpdateInput[e.target.name] = e.target.value;
         setUpdateItem(itemUpdateInput);
     }
-    console.log(editId, 'params ID')
-    console.log(updateItem)
 
     return (
         <div className='action-page'>
