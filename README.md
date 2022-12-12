@@ -90,4 +90,5 @@ We did not have the 'newComment' before and it worked after we added.
 + [Whimsical - Used for the Req-Res Diagram](https://whimsical.com)
 + [ESlint](https://stackoverflow.com/questions/41604162/eslint-throws-is-assigned-a-value-but-never-used-webpack-module)
 + [useEffect Hook missing dependencies](https://bobbyhadz.com/blog/react-hook-useeffect-has-missing-dependency)
-
++ [Validate form before submit fix](https://stephencharlesweiss.com/form-validation-prevent-default-and-on-submit-vs-on-click)
++ [Only number in input field](https://www.geeksforgeeks.org/how-to-force-input-field-to-enter-numbers-only-using-javascript/#:~:text=By%20default%2C%20HTML%205%20input,numeric%20keyboard%20on%20mobile%20devices.)
