@@ -33,13 +33,14 @@ const Edit = () => {
     console.log(updateItem)
 
     return (
-        <div>
-            <form>
-                <input placeholder="Item name" name="title" value={updateItem.title} onChange={handleUpdateInput} required></input>
-                <input placeholder="Description" name="description" value={updateItem.description} onChange={handleUpdateInput}></input>
-                <input placeholder="Image" name="images" value={updateItem.images} onChange={handleUpdateInput}></input>
-                <input placeholder="Price" name="price" value={updateItem.price} onChange={handleUpdateInput} required></input>
-                <button onClick={updateItemCall}>Submit</button>
+        <div className='action-page'>
+            <h1>Edit Item</h1>
+            <form className='item-box'>
+                <input className='input' placeholder="Item name" name="title" value={updateItem.title} onChange={handleUpdateInput} required></input>
+                <input className='input' placeholder="Description" name="description" value={updateItem.description} onChange={handleUpdateInput}></input>
+                <input className='input' placeholder="Image" name="images" value={updateItem.images} onChange={handleUpdateInput}></input>
+                <input className='input' placeholder="Price" name="price" value={updateItem.price} onChange={handleUpdateInput} required></input>
+                <button className='item-button' onClick={updateItemCall}>Submit</button>
             </form>
         </div>
     )
