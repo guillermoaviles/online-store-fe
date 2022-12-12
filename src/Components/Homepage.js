@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Homepage = (props) => {
   const getItems = () => {
@@ -35,6 +36,7 @@ const Homepage = (props) => {
   return  <div>
             <h1 className='items'>Items</h1>
             <div className='gallery-container'>{data}</div>
+            <Footer/>
           </div>
   
 };

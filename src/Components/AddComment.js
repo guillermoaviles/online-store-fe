@@ -30,10 +30,10 @@ const addNewComment = async (e) => {
 console.log(newComment)
   return (
     <div>
-      <form onSubmit={addNewComment}>
-        <input placeholder="Name" onChange={handleComment} name="user" value={newComment.user}></input>
-        <input placeholder="Review" onChange={handleComment} name="body" value={newComment.body}></input>
-        <button onClick={addNewComment}>Submit</button>
+      <form className='item-box' onSubmit={addNewComment}>
+        <input className='input' placeholder="Name" onChange={handleComment} name="user" value={newComment.user}></input>
+        <input className='input' placeholder="Review" onChange={handleComment} name="body" value={newComment.body}></input>
+        <button className='item-button' onClick={addNewComment}>Submit</button>
       </form>
     </div>
   );

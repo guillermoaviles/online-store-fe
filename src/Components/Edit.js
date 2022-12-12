@@ -34,12 +34,12 @@ const Edit = () => {
 
     return (
         <div>
-            <form className='edit-item-box'>
+            <form className='item-box'>
                 <input className='input' placeholder="Item name" name="title" value={updateItem.title} onChange={handleUpdateInput} required></input>
                 <input className='input' placeholder="Description" name="description" value={updateItem.description} onChange={handleUpdateInput}></input>
                 <input className='input' placeholder="Image" name="images" value={updateItem.images} onChange={handleUpdateInput}></input>
                 <input className='input' placeholder="Price" name="price" value={updateItem.price} onChange={handleUpdateInput} required></input>
-                <button className='edit-item-button' onClick={updateItemCall}>Submit</button>
+                <button className='item-button' onClick={updateItemCall}>Submit</button>
             </form>
         </div>
     )
