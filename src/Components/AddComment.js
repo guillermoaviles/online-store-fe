@@ -13,7 +13,7 @@ const AddComment = () => {
   });
 
 const addNewComment = async (e) => {
-  try {
+  try {/*eslint-disable no-unused-vars*/
         e.preventDefault()
         const newlyCreatedCmt = await axios.post(`https://online-store.herokuapp.com/api/online-store/newComment/${commentId}`, newComment)
         navigate(`/description/${commentId}`)

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
 
 const Homepage = (props) => {
   const getItems = () => {
@@ -13,6 +12,7 @@ const Homepage = (props) => {
   };
   useEffect(() => {
     getItems();
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (props.items === undefined) return;
