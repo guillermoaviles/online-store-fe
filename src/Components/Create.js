@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import axios from 'axios'
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const Create = () => {
@@ -14,7 +14,7 @@ const Create = () => {
 
     const createNewItem = async (e) => {
         e.preventDefault()
-        try{
+        try{/*eslint-disable no-unused-vars*/
             const newlyCreatedItem = await axios.post('https://online-store.herokuapp.com/api/online-store/newItem', newItem)
             navigate('/')
         }
