@@ -23,7 +23,7 @@ function App() {
       <Route path="/description/edit/:editId" element={<Edit/>}/>
       <Route path="/create" element={<Create/>}/>
       <Route path="/addComment/:commentId" element={<AddComment comments={comments} setComments={setComments}/>}/>
-      <Route path="/shipping-info" element={<BuyerInfo/>}/>
+      <Route path="/shipping-info/:id" element={<BuyerInfo items={items} setItems={setItems}/>}/>
     </Routes>
     <Footer/>
     </div>

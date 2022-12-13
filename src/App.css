@@ -97,7 +97,6 @@ h1 {
 }
 
 .item-info {
-    background-color: #f9f9f9;
     color: black;
     padding: 1px;
     width: 250px;
@@ -232,7 +231,6 @@ nav h4 {
 
 .item-description-box {
     padding: 15px;
-    background-color: #ebf2fa;
     border-radius: 30px;
 }
 
@@ -307,6 +305,16 @@ nav h4 {
 
 .action-page {
     height: 100vh;
+}
+
+.shipping-info-container-sent {
+    background-color: #f9f9f9;
+    margin: auto;
+    margin-top: 60px;
+    padding: 30px;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 @keyframes App-logo-spin {
