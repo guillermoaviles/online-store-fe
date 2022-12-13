@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useParams, useNavigate, Navigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
+import FileBase64 from 'react-file-base64'
 
 const Edit = () => {
     const navigate = useNavigate()
@@ -15,13 +16,15 @@ const Edit = () => {
     const updateItemCall = async (e) => {
         e.preventDefault()
         try {
+            // eslint-disable-next-line no-unused-vars
           const change = await axios.put(`https://online-store.herokuapp.com/api/online-store/edit/${editId}`, updateItem)
             navigate(`/description/${editId}`)
         }
         catch (err) {
           console.log(err)
         }
-      }
+      } 
+
 
     const handleUpdateInput = (e) => {
         e.preventDefault()
@@ -29,18 +32,17 @@ const Edit = () => {
         itemUpdateInput[e.target.name] = e.target.value;
         setUpdateItem(itemUpdateInput);
     }
-    console.log(editId, 'params ID')
-    console.log(updateItem)
 
     return (
         <div className='action-page'>
             <h1>Edit Item</h1>
-            <form className='item-box'>
+            <form className='item-box' onSubmit={updateItemCall}>
                 <input className='input' placeholder="Item name" name="title" value={updateItem.title} onChange={handleUpdateInput} required></input>
-                <input className='input' placeholder="Description" name="description" value={updateItem.description} onChange={handleUpdateInput}></input>
-                <input className='input' placeholder="Image" name="images" value={updateItem.images} onChange={handleUpdateInput}></input>
+                <input className='input' placeholder="Description" name="description" value={updateItem.description} onChange={handleUpdateInput} required></input>
+                <FileBase64 multiple={false} onDone={({ base64 }) => setUpdateItem({ ...updateItem, images: base64 })} required/>
+                <p className="short-text">File must be in '.jpg' format</p>
                 <input className='input' placeholder="Price" name="price" value={updateItem.price} onChange={handleUpdateInput} required></input>
-                <button className='item-button' onClick={updateItemCall}>Submit</button>
+                <button className='item-button'>Submit</button>
             </form>
         </div>
     )

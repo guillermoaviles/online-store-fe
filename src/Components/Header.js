@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <nav className='nav'>
           <Link to='/' >
-            <img src={icon}/>
+            <img src={icon} alt='pic'/>
           </Link>
           <Link to='/create' className='sell-button'>
             <h2>Sell</h2>
