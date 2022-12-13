@@ -303,6 +303,11 @@ nav h4 {
     font-weight: bold;
     margin-top: 15px;
 }
+.item-button:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
 
 .action-page {
     height: 100vh;
