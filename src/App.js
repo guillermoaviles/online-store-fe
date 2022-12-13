@@ -15,7 +15,7 @@ function App() {
   const [comments, setComments] = useState();
 
   return (
-    <div>
+    <div className="app">
     <Header/>
     <Routes>
       <Route path="/" element={<Homepage items={items} setItems={setItems}/>}/>
