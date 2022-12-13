@@ -45,6 +45,9 @@ a {
   flex-direction: row;
   align-items: center;
   gap: 4px;
+  position: absolute;
+  left: 150px;
+  top: 20px;
 }
 
 .toggle-theme-wrapper span {
