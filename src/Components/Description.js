@@ -6,6 +6,7 @@ import EditItemButton from './EditItemButton'
 const Description = (props) => {
   const navigate = useNavigate();
   const { id } = useParams();
+
   const getItems = () => {
     axios
       .get(`https://online-store.herokuapp.com/api/online-store/items/${id}`)
@@ -25,13 +26,12 @@ const Description = (props) => {
   useEffect(() => {
     getItems();
     getComments();
-     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+
   if (props.items === undefined) return;
-  
+
   if (props.comments === undefined) return;
-  
+
   const newComments = props.comments.map((someComment, key) => {
     return (
       <div className='comment-box' key={key}>
@@ -43,7 +43,7 @@ const Description = (props) => {
       </div>
     );
   });
-  
+
   const deleteComment = (commentId) => {
     axios
       .delete(
@@ -53,13 +53,13 @@ const Description = (props) => {
         window.location.reload()
       });
   };
-  
+
   return (
     <div className='description-page'>
       <h1 className='product-title'>{props.items.title}</h1>
       <div className='product-box'>
         <div className='image-box'>
-          <img className='description-image' src={props.items.images} alt={props.items.title}/>
+          <img className='description-image' src={props.items.images} alt={props.items.title} />
         </div>
         <div className='description-box'>
           <div className='item-description-box'>

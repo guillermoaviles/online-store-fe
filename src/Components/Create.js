@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios'
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import FileBase64 from 'react-file-base64'
 
 
@@ -30,16 +30,16 @@ const Create = () => {
         newItemInput[e.target.name] = e.target.value;
         setNewItem(newItemInput);
     }
-    console.log(newItem)
+
     return (
         <div className='action-page'>
             <h1>Sell Item</h1>
-            <form className='item-box'>
-                <input className='input' placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate} required></input>
-                <input className='input' placeholder="Description" name="description" value={newItem.description} onChange={handleCreate}></input>
-                <FileBase64 multiple={false} onDone={({ base64 }) => setNewItem({ ...newItem, images: base64 })} />
-                <input className='input' placeholder="Price" name="price" value={newItem.price} onChange={handleCreate} required></input>
-                <button className='item-button' onClick={createNewItem}>Submit</button>
+            <form className='item-box' onSubmit={createNewItem}>
+                <input className='input' placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate} required />
+                <input className='input' placeholder="Description" name="description" value={newItem.description} onChange={handleCreate} required />
+                <FileBase64 multiple={false} onDone={({ base64 }) => setNewItem({ ...newItem, images: base64 })} required />
+                <input className='input' placeholder="Price" name="price" value={newItem.price} onChange={handleCreate} type='number' required />
+                <button className='item-button'>Submit</button>
             </form>
         </div>
     )

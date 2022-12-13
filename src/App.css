@@ -1,3 +1,7 @@
+* {
+    font-family: 'Signika Negative', sans-serif;
+}
+
 .App {
     text-align: center;
     color: #a7a8a9;
@@ -8,12 +12,6 @@
 .App-logo {
     height: 40vmin;
     pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    /* img {
-    animation: App-logo-spin infinite 20s linear;
-} */
 }
 
 nav {
@@ -38,7 +36,7 @@ nav h2 {
     padding: 5px;
     display: inline-block;
     vertical-align: middle;
-    background-color: #323438;
+    background-color: #224870;
     border-radius: 9.5px;
 }
 
@@ -53,7 +51,8 @@ nav h4 {
 }
 
 nav h2:hover {
-    color: lightgray;
+    color: #000;
+    background-color: #ebf2fa;
 }
 
 h1 {
@@ -80,12 +79,12 @@ h1 {
     margin-top: 40px;
     list-style: none;
     min-height: 100vh;
+
 }
 
 .item {
     border-style: solid;
-    border-width: 1px;
-    border-color: #191c1e;
+    border: #191c1e 2px solid;
     padding: 5px;
     width: 300px;
     height: 350px;
@@ -93,7 +92,8 @@ h1 {
     font-weight: bold;
     font-size: 3em;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 20px;
+
 }
 
 .item-info {
@@ -113,7 +113,7 @@ h1 {
 
 .item-title {
     color: black;
-    font-size: 12px;
+    font-size: 0.35em;
 }
 
 .price {
@@ -170,6 +170,7 @@ nav h4 {
     padding: 0;
     margin: auto;
     list-style: none;
+
 }
 
 .description-image {
@@ -196,6 +197,13 @@ nav h4 {
     font-weight: bold;
 }
 
+.buy-button:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+
+}
+
 .edit-button {
     background-color: #fec601;
     width: 110px;
@@ -214,6 +222,18 @@ nav h4 {
     font-weight: bold;
 }
 
+.review-button:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
+.edit-button:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
 .delete-comment-button {
     background-color: #fec601;
     width: 110px;
@@ -221,6 +241,12 @@ nav h4 {
     border-radius: 20px;
     border-style: none;
     font-weight: bold;
+}
+
+.delete-comment-button:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
 }
 
 .reviews-box {
@@ -292,6 +318,7 @@ nav h4 {
     margin-top: 15px;
 }
 
+
 .cancel-button {
     background-color: #fec601;
     width: 110px;
@@ -325,6 +352,15 @@ nav h4 {
     to {
         transform: rotate(360deg);
     }
+
+.item-button:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
+.action-page {
+    height: 100vh;
 }
 
 #root {
@@ -354,6 +390,7 @@ a:-webkit-any-link {
     .cart {
         margin-right: 30px;
     }
+
     .item {
         margin-right: 20px;
     }
@@ -376,6 +413,7 @@ a:-webkit-any-link {
     .cart {
         margin-right: 30px;
     }
+
     .item {
         margin-right: 20px;
     }
@@ -404,7 +442,7 @@ a:-webkit-any-link {
 
     .item-description-box {
         max-width: 300px;
-        
+
     }
 
     .item-description {
@@ -427,6 +465,7 @@ a:-webkit-any-link {
     .cart {
         margin-right: 80px;
     }
+
     .description-image {
         height: 100%;
         max-width: 800px;
