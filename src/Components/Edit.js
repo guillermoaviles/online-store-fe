@@ -16,7 +16,6 @@ const Edit = () => {
     const updateItemCall = async (e) => {
         e.preventDefault()
         try {
-            /*eslint-disable no-unused-vars*/
           const change = await axios.put(`https://online-store.herokuapp.com/api/online-store/edit/${editId}`, updateItem)
             navigate(`/description/${editId}`)
         }

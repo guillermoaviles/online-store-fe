@@ -12,7 +12,6 @@ const Homepage = (props) => {
   };
   useEffect(() => {
     getItems();
-     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (props.items === undefined) return;

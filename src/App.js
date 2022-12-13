@@ -15,15 +15,15 @@ function App() {
 
   return (
     <div>
-    <Header/>
-    <Routes>
-      <Route path="/" element={<Homepage items={items} setItems={setItems}/>}/>
-      <Route path="/description/:id" element={<Description items={items} setItems={setItems} comments={comments} setComments={setComments}/>}/>
-      <Route path="/description/edit/:editId" element={<Edit/>}/>
-      <Route path="/create" element={<Create/>}/>
-      <Route path="/addComment/:commentId" element={<AddComment comments={comments} setComments={setComments}/>}/>
-    </Routes>
-    <Footer/>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Homepage items={items} setItems={setItems} />} />
+        <Route path="/description/:id" element={<Description items={items} setItems={setItems} comments={comments} setComments={setComments} />} />
+        <Route path="/description/edit/:editId" element={<Edit />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/addComment/:commentId" element={<AddComment comments={comments} setComments={setComments} />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
