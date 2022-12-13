@@ -225,6 +225,11 @@ nav h4 {
     border-style: none;
     font-weight: bold;
 }
+.edit-button:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
 
 .delete-comment-button {
     background-color: #fec601;
