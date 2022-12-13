@@ -39,7 +39,7 @@ const Create = () => {
                 <input className='input' placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate} required maxlength="55"/>
                 <input className='input' placeholder="Description" name="description" value={newItem.description} onChange={handleCreate} required />
                 <FileBase64 multiple={false} onDone={({ base64 }) => setNewItem({ ...newItem, images: base64 })} required />
-                <p className="short-text">File must be in '.jpg' format</p> 
+                <p className="short-text">File must be in '.jpeg' format</p> 
                 <input className='input' placeholder="Price" name="price" value={newItem.price} onChange={handleCreate} type='number' required />
                 <button className='item-button'>Submit</button>
             </form>
