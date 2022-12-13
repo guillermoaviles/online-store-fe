@@ -44,17 +44,6 @@ const Description = (props) => {
     );
   });
 
-  const deleteItem = (itemId) => {
-    axios
-      .delete(
-        `https://online-store.herokuapp.com/api/online-store/deleteItem/${itemId}`
-      )
-      .then((response) => {
-        props.setItems(response.data);
-        navigate('/')
-      });
-  };
-
   const deleteComment = (commentId) => {
     axios
       .delete(
@@ -78,8 +67,10 @@ const Description = (props) => {
             <p className='item-description'>{props.items.description}</p>
             <p className='item-price'>${props.items.price}</p>
             <div>
-              <button className='buy-button' onClick={() => deleteItem(props.items._id)}>Buy</button>
-              <Link to={`/description/edit/${props.items._id}`}><EditItemButton /></Link>
+              <Link to={`/shipping-info/${props.items._id}`}>
+                <button className='buy-button'>Buy</button>
+              </Link>
+              <Link to={`/description/edit/${props.items._id}`}><EditItemButton/></Link>
             </div>
           </div>
         </div>
