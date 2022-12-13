@@ -34,7 +34,7 @@ const Homepage = (props) => {
     );
   });
   return  <div>
-            <h1 className='items'>Items</h1>
+            <h1 className='items'>Available Items({data.length})</h1>
             <div className='gallery-container'>{data}</div>
           </div>
   
