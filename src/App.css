@@ -356,7 +356,7 @@ nav h4 {
 }
 
 .shipping-info-container-sent {
-    background-color: var(--background-color);
+    background-color: var(--cmt-box-bg);
     color: var(--primary-text-color);
     margin: auto;
     margin-top: 60px;
