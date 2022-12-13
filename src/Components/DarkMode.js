@@ -1,45 +1,57 @@
-import React from 'react'
-import './style/DarkMode.css'
+import "./style/DarkMode.css";
+import React, { ChangeEventHandler } from "react";
 
-const DarkMode = () => {
-    let clickedClass = "clicked";
-    const body = document.body;
-    const lightTheme = "light";
-    const darkTheme = "dark";
-    let theme;
+/* NEW (START) */
+const setDark = () => {
+  localStorage.setItem("theme", "dark");
+  document.documentElement.setAttribute("data-theme", "dark");
+};
 
-    if (localStorage) {
-        theme = localStorage.getItem("theme");
-    }
+const setLight = () => {
+  localStorage.setItem("theme", "light");
+  document.documentElement.setAttribute("data-theme", "light");
+};
 
-    if(theme === lightTheme || theme === darkTheme) {
-        body.classList.add(theme);
-    } else {
-        body.classList.add(lightTheme)
-    }
+const storedTheme = localStorage.getItem("theme");
 
-    const switchTheme = (e) => {
-        if (theme === darkTheme) {
-            body.classList.replace(darkTheme, lightTheme);
-            e.target.classList.remove(clickedClass);
-            localStorage.setItem("theme", "light");
-            theme = lightTheme;
-        } else {
-            body.classList.replace(lightTheme, darkTheme);
-            e.target.classList.add(clickedClass);
-            localStorage.setItem("theme", "dark");
-        }
-    }
+const prefersDark =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  return (
-    <button
-    className={theme === "dark" ? clickedClass: ""}
-    id="darkMode"
-    onClick={(e) => switchTheme(e)}
-    >
+const defaultDark =
+  storedTheme === "dark" || (storedTheme === null && prefersDark);
 
-    </button>
-  )
+if (defaultDark) {
+  setDark();
 }
 
-export default DarkMode
+const toggleTheme: ChangeEventHandler<HTMLInputElement> = (e) => {
+  if (e.target.checked) {
+    setDark();
+  } else {
+    setLight();
+  }
+};
+/* NEW (END) */
+
+const DarkMode = () => {
+  return (
+    <div className="toggle-theme-wrapper">
+      <span>☀️</span>
+      <label className="toggle-theme" htmlFor="checkbox">
+        <input
+          type="checkbox"
+          id="checkbox"
+
+          // NEW
+          onChange={toggleTheme}
+          defaultChecked={defaultDark}
+        />
+        <div className="slider round"></div>
+      </label>
+      <span>🌒</span>
+    </div>
+  );
+};
+
+export default DarkMode;
