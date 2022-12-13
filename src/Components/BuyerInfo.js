@@ -15,9 +15,9 @@ const BuyerInfo = (props) => {
 
     const sendInfo =() =>{
         setInfoSent(true);
-        setTimeout(() =>{ //set timer for shipping info input window to close 3 seconds after the use hit Submit button
+        setTimeout(() =>{
         navigate('/')
-        }, 10000)
+        }, 8000)
     }
 
     const deleteItem = (itemId) => {
@@ -129,19 +129,14 @@ const BuyerInfo = (props) => {
                     deleteItem(props.items._id)}}
                 >
                 Submit</button>
-                <button className='cancel-button' onClick={() => {
-                    // setOpenWindow(false);
-                    navigate(-1)
-                }}
-                 >
-                Cancel</button>
+                <button className='cancel-button' onClick={() => {navigate(-1)}}>Cancel</button>
                 </div>
             </div>
         </div>
         }
 
         {infoSent && <div className='shipping-info-container-sent'>
-            <img className='sent-info-img' src={received} style={{ height: '20vh'}}/>
+            <img className='sent-info-img' src={received} style={{ height: '20vh'}} alt="sent-pic"/>
             <h3>Information Received!</h3>
             <p>Your information was sent to the seller. Expect a response within the next business day.</p>
             <p>You will now be redirected to the home page.</p>

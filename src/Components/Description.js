@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import EditItemButton from './EditItemButton'
 
 const Description = (props) => {
-  const navigate = useNavigate();
   const { id } = useParams();
 
   const getItems = () => {
