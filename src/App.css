@@ -97,7 +97,7 @@ h1 {
 }
 
 .item-info {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     color: black;
     padding: 1px;
     width: 250px;
@@ -236,7 +236,7 @@ nav h4 {
 
 .item-description-box {
     padding: 15px;
-    background-color: #ebf2fa;
+    /* background-color: #ebf2fa; */
     border-radius: 30px;
 }
 
