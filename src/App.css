@@ -1,3 +1,6 @@
+*{
+    font-family: 'Signika Negative', sans-serif;
+}
 .App {
     text-align: center;
     color: #a7a8a9;
@@ -171,6 +174,7 @@ nav h4 {
     padding: 0;
     margin: auto;
     list-style: none;
+    
 }
 
 .description-image {
@@ -195,6 +199,13 @@ nav h4 {
     border-style: none;
     margin-right: 20px;
     font-weight: bold;
+}
+
+.buy-button:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+
 }
 
 .edit-button {
