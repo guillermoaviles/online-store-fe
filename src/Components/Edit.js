@@ -37,8 +37,8 @@ const Edit = () => {
             <h1>Edit Item</h1>
             <form className='item-box'>
                 <input className='input' placeholder="Item name" name="title" value={updateItem.title} onChange={handleUpdateInput} required></input>
-                <input className='input' placeholder="Description" name="description" value={updateItem.description} onChange={handleUpdateInput}></input>
-                <FileBase64 multiple={false} onDone={({ base64 }) => setUpdateItem({ ...updateItem, images: base64 })} />
+                <input className='input' placeholder="Description" name="description" value={updateItem.description} onChange={handleUpdateInput} required></input>
+                <FileBase64 multiple={false} onDone={({ base64 }) => setUpdateItem({ ...updateItem, images: base64 })} required/>
                 <input className='input' placeholder="Price" name="price" value={updateItem.price} onChange={handleUpdateInput} required></input>
                 <button className='item-button' onClick={updateItemCall}>Submit</button>
             </form>
