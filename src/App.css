@@ -225,6 +225,11 @@ nav h4 {
     border-style: none;
     font-weight: bold;
 }
+.review-button:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
 .edit-button:hover{
     cursor: pointer;
     background-color: #000;
