@@ -11,7 +11,7 @@ The online store app would be the place where the users can freely buy any avail
 + This repository is the front-end respository for the app.
 + The backend is deployed on Heroky: [here](https://online-store.herokuapp.com/api/online-store/)
 + The front end is deployed on Vercel: [here](https://online-store-fe-3vpd-b12pu7004-guillermoaviles.vercel.app/)
-+ The associated front end repository can be found: [here](https://github.com/guillermoaviles/online-store-fe)
++ The associated back end repository can be found: [here](https://github.com/guillermoaviles/online-store-be)
 
 ## Deployment
 The front-end of our application uses ReactJS as our library. The front-end follows the best practice in naming the components to be semantic. The front-end composes the following technologies/platforms:
