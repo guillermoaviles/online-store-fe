@@ -16,6 +16,7 @@ const Create = () => {
     const createNewItem = async (e) => {
         e.preventDefault()
         try {
+            // eslint-disable-next-line no-unused-vars
             const newlyCreatedItem = await axios.post('https://online-store.herokuapp.com/api/online-store/newItem', newItem)
             navigate('/')
         }
@@ -35,9 +36,10 @@ const Create = () => {
         <div className='action-page'>
             <h1>Sell Item</h1>
             <form className='item-box' onSubmit={createNewItem}>
-                <input className='input' placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate} required />
+                <input className='input' placeholder="Item name" name="title" value={newItem.title} onChange={handleCreate} required maxlength="55"/>
                 <input className='input' placeholder="Description" name="description" value={newItem.description} onChange={handleCreate} required />
                 <FileBase64 multiple={false} onDone={({ base64 }) => setNewItem({ ...newItem, images: base64 })} required />
+                <p className="short-text">File must be in '.jpg' format</p> 
                 <input className='input' placeholder="Price" name="price" value={newItem.price} onChange={handleCreate} type='number' required />
                 <button className='item-button'>Submit</button>
             </form>
