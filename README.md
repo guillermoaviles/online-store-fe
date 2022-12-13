@@ -9,9 +9,14 @@
 The online store app would be the place where the users can freely buy any available items on the sites, sell an item by creating a new post, add a review/comment to an existing item. The app give the users the freedom to buy and sell without paying any fees or restrictions.
 
 + This repository is the front-end respository for the app.
-+ The backend is deployed on Heroku: [here](https://online-store.herokuapp.com/api/online-store/)
-+ The front end is deployed on Vercel: [here](https://online-store-fe-3vpd-b12pu7004-guillermoaviles.vercel.app/)
-+ The associated back end repository can be found: [here](https://github.com/guillermoaviles/online-store-be)
++ The back-end is deployed on Heroky: [here](https://online-store.herokuapp.com/api/online-store/)
++ The front-end is deployed on Vercel: [here](https://online-store-fe-3vpd-b12pu7004-guillermoaviles.vercel.app/)
++ The associated back-end repository can be found: [here](https://github.com/guillermoaviles/online-store-be)
+
+## Installation
+1. Clone this repository to your labs folder and change directory into it.
+2. Run `npm i` to download required dependencies.
+3. Run `npm start` to run localhost
 
 ## Deployment
 The front-end of our application uses ReactJS as our library. The front-end follows the best practice in naming the components to be semantic. The front-end composes the following technologies/platforms:
@@ -29,7 +34,8 @@ Vercel is the most accessible platform to deploy websites. By connecting the ** 
 </div>
 
 ### After
-<div align="center">TBD
+<div align="center">
+<img src="https://media.giphy.com/media/AzQLqWMJ5ceyXKYCJb/giphy.gif"/>
 </div>
 
 ## React Component Hierarchy
@@ -55,6 +61,14 @@ Vercel is the most accessible platform to deploy websites. By connecting the ** 
 + AAU, I want to be able to delete a comment.
 
 ## Post MVP
+- Create a more logical way to buy an item from the site.
+- Add the drop file feature so users can upload picture directly from their phone or computer.
+- Add a toggle for Light & Dark mode.
+- Users are able to enter their personal information for shipping purposes.
+
+## Future features
++ Added User Authentication.
++ A smooth transaction from A to Z for users to purchase an item.
 
 ## Project Management
 The team followed the daily SCRUM protocols and met for a 5 to 10 minutes a day to discuss small wins, achievements, any blockers, unresolved issues, obstacles that we were encountering. We also met before the day end to discuss any working plans and small goals for the next days.As for the Git workflow, we follow the *'Feature Branch'* method where we have the inital code set-up in the main branch. Everyone who is working will branch out to dev branch to work and push up the code accordingly. Guillermo, who is our Git Manager, then reviewed the latest code with the team to validate the code. He then will submit a pull request and merged that PR to the dev branch. Once our code met MVP, he then merge code to main branch for deployment to Heroku. The team was committed to collabrate creatively and equally. We tried to be mindful of that and divided the work so that everyone at least working on something on both backend and front end.
@@ -62,8 +76,6 @@ The team followed the daily SCRUM protocols and met for a 5 to 10 minutes a day 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/114704720/206955919-a8dbd9d1-3a2c-4e1d-bb16-b626883ce46c.png"/>
 </div>
-
-## Code Snippet
 
 ## Issues & Resolutions
 We were having an issue on submitting an comment and the request was not coming through. We tested the request with Postman and it worked as expected. So we narrowed it down to our codes. I looked over many times, added console.log to check every inputs were received correctly and still did not know why it did not work. Then I realized, in the axios call, I forgot the second argument in the code hence we were sending an empty body everytime. I realized that I skipped over the code because my brain assumed that the information was supposed to be there. But when you are reviewing someone's code, you have to read it carefully. DO NOT SKIP!
@@ -80,7 +92,7 @@ const addNewComment = async (e) => {
   }
 }
 ```
-We did not have the 'newComment' before and it worked after we added.
+We did not have the `newComment` so we were sending an empty body to our API. The call worked after we added the `newComment`.
 
 ## Resources:
 
@@ -92,3 +104,5 @@ We did not have the 'newComment' before and it worked after we added.
 + [useEffect Hook missing dependencies](https://bobbyhadz.com/blog/react-hook-useeffect-has-missing-dependency)
 + [Validate form before submit fix](https://stephencharlesweiss.com/form-validation-prevent-default-and-on-submit-vs-on-click)
 + [Only number in input field](https://www.geeksforgeeks.org/how-to-force-input-field-to-enter-numbers-only-using-javascript/#:~:text=By%20default%2C%20HTML%205%20input,numeric%20keyboard%20on%20mobile%20devices.)
++ [Drop File feature/package](https://www.npmjs.com/package/react-file-base64?activeTab=readme)
++ [How to Create a Dark Mode Component in React](https://www.youtube.com/watch?v=6s_MkSKKV0c&ab_channel=AlexEagleson)
