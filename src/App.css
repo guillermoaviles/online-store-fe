@@ -244,6 +244,11 @@ nav h4 {
     border-style: none;
     font-weight: bold;
 }
+.delete-comment-button:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
 
 .reviews-box {
     max-width: 600px;
